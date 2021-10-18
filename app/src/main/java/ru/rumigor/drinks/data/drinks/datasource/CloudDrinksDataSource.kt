@@ -13,5 +13,8 @@ class CloudDrinksDataSource @Inject constructor(
         drinksApi
             .getDrinks()
             .toObservable()
+            .map{
+                it.drinks
+            }
 
 }
